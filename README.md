@@ -126,33 +126,52 @@ This diagram illustrates the registration process for new users. The user submit
 
 ### Agent Registration Sequence Diagram
 ![Sequence Diagram](./Diagram/Sequence/agent_registration.png)
+
 Similar to user signup but tailored for agents. After form submission, the backend validates inputs, hashes passwords, and checks for email/username conflicts in the database. Success creates an agent record, generates a JWT token with an "agent" role, sets an agentToken cookie, and returns agent data. The frontend stores the token and redirects to the agent dashboard.
+
 ### Agent Dashboard Access Sequence Diagram
 ![Sequence Diagram](./Diagram/Sequence/agent_dashboard_access.png)
+
 Depicts how authenticated agents access their dashboard. The frontend sends a dashboard request with the agentToken cookie. The backend verifies the token via JWT. If invalid/expired, it returns 401/403 and redirects to login. Valid tokens decode agent details, fetch agent data and related properties (including saved posts/messages) from the database, and return a formatted dashboard response (200 OK).
+
 ### Post New Property Sequence Diagram
 ![Sequence Diagram](./Diagram/Sequence/Post_new_property.png)
+
 Shows property creation by users/agents. Users upload images via Cloudinary and submit property details. The frontend verifies authentication (token/agentToken). Authenticated users trigger backend validation, database creation of post and postDetail records, and linkage to the user/agent. Errors return 500; success returns the new property (200 OK) and redirects to its detail page.
+
 ### Update Listing Details Sequence Diagram
 ![Sequence Diagram](./Diagram/Sequence/Update_listing_details.png)
+
 Describes property editing. Users navigate to an edit form; the frontend fetches existing data. After edits (and optional image updates via Cloudinary), the backend verifies ownership. Price changes trigger priceHistory creation. The backend updates post/postDetail records and returns 200 OK or 500 errors. Success redirects to the updated property page.
+
 ### Delete Listings Sequence Diagram
 ![Sequence Diagram](./Diagram/Sequence/Delete_outdated_listings.png)
+
 Illustrates property deletion. After user confirmation, the backend checks authentication and ownership. It recursively deletes dependent records (postDetail, priceHistory, savedPosts) before deleting the main post. Success (200 OK) updates the UI; failures return 500 errors.
+
 ### Find Properties by Criteria Sequence Diagram
 ![Sequence Diagram](./Diagram/Sequence/Find_properties_by_criteria.png)
+
 Shows property searches. Users set filters (e.g., price, location); the frontend constructs a query string. The backend optionally authenticates the user, parses filters, and queries the database. Authenticated users receive results with isSaved flags (indicating saved properties). Results display in list/map views.
+
 ### View Properties on Map Sequence Diagram
 ![Sequence Diagram](./Diagram/Sequence/view_properties_on_map.png)
+
 Details map-based property browsing. The frontend fetches properties (with coordinates) from the backend. The map component initializes, centers based on property locations, and renders pins with customized icons. Clicking a pin shows a preview; selecting "View Details" navigates to the property page.
+
 ### Contact Property Owners Sequence Diagram
 ![Sequence Diagram](./Diagram/Sequence/Contact_property_owners.png)
+
 Covers messaging between users and property owners. Authenticated users initiate chats via /api/chats. Existing chats are reused or new ones are created. Messages are saved, and Socket.IO notifies the owner in real-time. Offline owners receive stored notifications.
+
 ### Manage Personal Info Sequence Diagram
 ![Sequence Diagram](./Diagram/Sequence/Manage_personal_info.png)
+
 Describes profile updates (users/agents). Users edit details (e.g., avatar via Cloudinary, password). Password changes trigger re-authentication (log out after update). Other updates return sanitized data (200 OK) and refresh the UI context.
+
 ### Save Favorite Properties Sequence Diagram
 ![Sequence Diagram](./Diagram/Sequence/Save_favorite_properties.png)
+
 Shows saving/unsaving properties. Authenticated users click a save icon; the backend checks ownership (users can’t save their own properties). Existing saves are deleted; new ones are added to savedPosts. The frontend toggles the isSaved UI state.
 
 ---
