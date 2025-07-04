@@ -1,0 +1,131 @@
+.registerPage {
+  height: 100%;
+  display: flex;
+
+  .formContainer {
+    flex: 3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      input {
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+
+        &:focus {
+          border-color: #880808;
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(136, 8, 8, 0.2);
+        }
+      }
+
+      button {
+        padding: 15px;
+        border-radius: 8px;
+        border: none;
+        background-color: #880808;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+
+        &:hover {
+          background-color: #a00;
+        }
+
+        &:disabled {
+          background-color: #bed9d8;
+          cursor: not-allowed;
+        }
+      }
+
+      .error {
+        color: #e53935;
+        font-size: 14px;
+        text-align: center;
+        margin-top: -10px;
+      }
+
+      .footer {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+        
+        p {
+          margin: 5px 0;
+        }
+        
+        .agentOption {
+          margin-top: 20px;
+          padding-top: 20px;
+          border-top: 1px solid #eee;
+          
+          p {
+            margin-bottom: 8px;
+            font-size: 15px;
+          }
+          
+          a {
+            color: #4b0082;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 6px;
+            background-color: #f5f0ff;
+            transition: all 0.3s;
+            
+            &:hover {
+              background-color: #e6d9ff;
+              color: #6a0dad;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .imgContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      max-width: 800px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+}

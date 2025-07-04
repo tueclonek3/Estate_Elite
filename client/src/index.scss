@@ -1,0 +1,23 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+}
+.ql-clipboard {
+  display: none !important;
+  position: absolute !important;
+  left: -100000px !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow-y: hidden !important;
+}

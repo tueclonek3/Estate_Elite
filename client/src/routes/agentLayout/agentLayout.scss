@@ -1,0 +1,101 @@
+.agentLayout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    .agentHeader {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        
+        .logo {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: bold;
+          font-size: 20px;
+          color: #880808;
+          text-decoration: none;
+          
+          img {
+            width: 30px;
+          }
+        }
+        
+        nav {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          
+          a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            
+            &:hover {
+              color: #880808;
+            }
+          }
+          
+          .agentProfile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 8px 15px;
+            border-radius: 30px;
+            background-color: #f8f5ff;
+            transition: background-color 0.3s;
+            
+            &:hover {
+              background-color: #e6d9ff;
+            }
+            
+            img {
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+            
+            span {
+              font-weight: 500;
+              color: #4b0082;
+            }
+            .agentLogout {
+                padding: 8px 16px;
+                background-color: #880808;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 500;
+                transition: background-color 0.3s;
+                
+                &:hover {
+                  background-color: #a00;
+                }
+              }
+          }
+        }
+      }
+    }
+    
+    main {
+      flex: 1;
+      padding: 30px 20px;
+    }
+  }

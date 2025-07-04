@@ -1,0 +1,110 @@
+@use "../../responsive.scss" as *;
+
+.homePage {
+  display: flex;
+  height: 100%;
+
+  .textContainer {
+    flex: 3;
+
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      height: 100%;
+
+      @include lg {
+        padding-right: 50px;
+      }
+
+      @include md {
+        padding: 0;
+      }
+
+      @include sm {
+        justify-content: flex-start;
+      }
+
+      .title {
+        font-size: 64px;
+
+        @include lg {
+          font-size: 48px;
+        }
+      }
+
+      /* ADDED: Welcome message styles */
+      .welcomeMessage {
+        background-color: rgba(136, 8, 8, 0.1); /* Red tint background */
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border-left: 4px solid #880808; /* EstateElite red accent */
+        font-weight: bold;
+        color: #333;
+        display: flex;
+        align-items: center;
+        
+        /* Agent specific style */
+        &[data-agent="true"] {
+          background-color: rgba(255, 105, 180, 0.1); /* Pink tint for agents */
+          border-left-color: #ff69b4; /* Hot pink for agents */
+        }
+        
+        /* Icon styling */
+        .icon {
+          margin-right: 10px;
+          font-size: 24px;
+        }
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+
+        @include sm {
+          display: none;
+        }
+
+        .box {
+          h1 {
+            font-size: 36px;
+
+            @include lg {
+              font-size: 32px;
+            }
+          }
+
+          h2 {
+            font-size: 20px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+
+  .imgContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      width: 115%;
+      position: absolute;
+      right: 0;
+
+      @include lg {
+        width: 105%;
+      }
+    }
+  }
+}
