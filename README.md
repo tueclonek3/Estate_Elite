@@ -182,7 +182,7 @@ Enums: type_enum (buy/rent), property_enum (apartment/house/etc.).
 Relationships: Users link to posts/chats/saved posts; posts link to details/price history/saved posts; chats include messages. Agents are independent.
 
 ## Layered Architecture 
-![Database_Schema](./Diagram/Layered Architecture/diagram-export-7-4-2025-10_46_58-PM.png)
+![Layered_Architecture ](./Diagram/Layered_Architecture/diagram-export-7-4-2025-10_46_58-PM.png)
 Details a 5-tier structure:
 Presentation Layer: React frontend (pages, components, context, API client).
 Application Layer: Express backend (controllers, routes, middleware, Socket.IO).
