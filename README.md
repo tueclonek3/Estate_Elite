@@ -116,7 +116,7 @@ console-ninja node --watch app.js
 
 Sequence Diagram
 
-![Sequence Diagram](./client/Diagram/Sequence/Contact_property_owners.png)
+![Sequence Diagram](./Diagram/Sequence/Contact_property_owners.png)
 
 ---
 
