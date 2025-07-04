@@ -176,6 +176,10 @@ Shows saving/unsaving properties. Authenticated users click a save icon; the bac
 
 ## Database Schema
 ![Database_Schema](./Diagram/Database_Schema/diagram-export-7-4-2025-11_20_28-PM.png)
+Defines MongoDB collections using Prisma:
+Core entities: users, agents, posts, postDetails, savedPosts, priceHistory, chats, messages.
+Enums: type_enum (buy/rent), property_enum (apartment/house/etc.).
+Relationships: Users link to posts/chats/saved posts; posts link to details/price history/saved posts; chats include messages. Agents are independent.
 ---
 
 
