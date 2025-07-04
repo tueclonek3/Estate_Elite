@@ -180,6 +180,17 @@ Defines MongoDB collections using Prisma:
 Core entities: users, agents, posts, postDetails, savedPosts, priceHistory, chats, messages.
 Enums: type_enum (buy/rent), property_enum (apartment/house/etc.).
 Relationships: Users link to posts/chats/saved posts; posts link to details/price history/saved posts; chats include messages. Agents are independent.
+
+## Layered Architecture 
+![Database_Schema](./Diagram/Layered Architecture/diagram-export-7-4-2025-10_46_58-PM.png)
+Details a 5-tier structure:
+Presentation Layer: React frontend (pages, components, context, API client).
+Application Layer: Express backend (controllers, routes, middleware, Socket.IO).
+Domain Layer: Business logic (entities, validation, rules).
+Data Access Layer: Prisma ORM and MongoDB.
+Infrastructure Layer: Supporting services (Cloudinary, JWT, environment variables).
+Connections: Frontend calls backend APIs; backend enforces validation/business rules; Prisma maps to MongoDB; infrastructure integrates external services.
+
 ---
 
 
