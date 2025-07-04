@@ -116,7 +116,7 @@ console-ninja node --watch app.js
 
 ## \:framed\_picture: Architecture Diagram
 
-![Architecture Diagram](./public/analytics.png)
+![Architecture Diagram](./client/public/analytics.png)
 
 * **Frontend** communicates with **Express API** and receives real-time messages via **Socket.IO**.
 * **Prisma** abstracts MongoDB access.
