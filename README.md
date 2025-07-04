@@ -114,13 +114,9 @@ console-ninja node --watch app.js
 
 ---
 
-## \:framed\_picture: Architecture Diagram
+Sequence Diagram
 
-![Architecture Diagram](./client/public/analytics.png)
-
-* **Frontend** communicates with **Express API** and receives real-time messages via **Socket.IO**.
-* **Prisma** abstracts MongoDB access.
-* **JWT middleware** secures user/agent routes.
+![Sequence Diagram](./client/Diagram/Sequence/Contact_property_owners.png)
 
 ---
 
