@@ -6,29 +6,6 @@ A full-stack web application for real estate listings with chat functionality, f
 * **Backend:** Node.js + Express + Prisma
 * **Database:** MongoDB
 
----
-
-## ✨ Features
-
-### 👤 User Features
-- Sign up/login/logout (JWT + cookie-based)
-- View property listings
-- Save favorite posts
-- Chat with agents
-- Post property listings
-- View price history
-- Edit/delete own listings
-
-### 🏆 Agent Features
-- Special agent registration/login
-- Dedicated dashboard
-- Property management tools
-- Client communication features
-
-### 👑 Admin Features (via API)
-- User and agent data access
-- Post management capabilities
-
 ## \:file\_folder: Project Structure
 
 ```bash
