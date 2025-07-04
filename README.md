@@ -8,29 +8,26 @@ A full-stack web application for real estate listings with chat functionality, f
 
 ---
 
-## \:house: Features
+## ✨ Features
 
-### User
+### 👤 User Features
+- Sign up/login/logout (JWT + cookie-based)
+- View property listings
+- Save favorite posts
+- Chat with agents
+- Post property listings
+- View price history
+- Edit/delete own listings
 
-* Sign up/login/logout (JWT + cookie-based)
-* View property listings
-* Save posts
-* Chat with agents
-* Post property listings
-* View price history
+### 🏆 Agent Features
+- Special agent registration/login
+- Dedicated dashboard
+- Property management tools
+- Client communication features
 
-### Agent
-
-* Sign up/login/logout
-* View dashboard
-* Manage listings
-
-### Admin (via API)
-
-* User and agent data access
-* Post management
-
----
+### 👑 Admin Features (via API)
+- User and agent data access
+- Post management capabilities
 
 ## \:file\_folder: Project Structure
 
@@ -60,8 +57,8 @@ Estate_app/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/real-estate-app.git
-cd real-estate-app
+git clone https://github.com/tueclonek3/Estate_Elite.git
+cd Estate_Elite
 ```
 
 ### 2. Setup Environment Variables
@@ -89,7 +86,7 @@ cd ../socket && npm install
 cd api
 npx prisma generate
 npx prisma db push
-npm run dev
+console-ninja node --watch app.js
 
 # Terminal 2: Frontend
 cd ../client
@@ -97,7 +94,7 @@ npm run dev
 
 # Terminal 3: Socket Server
 cd ../socket
-node app.js
+console-ninja node --watch app.js
 ```
 
 ---
