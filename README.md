@@ -117,9 +117,11 @@ console-ninja node --watch app.js
 ## Sequence Diagram
 ### New User Signup Sequence Diagram
 ![Sequence Diagram](./Diagram/Sequence/user_register.png)
+
 This diagram illustrates the registration process for new users. The user submits a registration form through the frontend, which sends data to the backend. The backend validates inputs (email format, password match, required fields) and returns 400 errors for failures. If valid, it generates a username, hashes the password via BCrypt, and attempts to create a user in the database. Conflicts (duplicate email/username) trigger 400 Conflict errors. On success, the backend removes sensitive data (password) and returns a 201 Created response, prompting the frontend to redirect the user to login.
 ### User Login Sequence Diagram
 ![Sequence Diagram](./Diagram/Sequence/User_login.png)
+
 This diagram illustrates the registration process for new users. The user submits a registration form through the frontend, which sends data to the backend. The backend validates inputs (email format, password match, required fields) and returns 400 errors for failures. If valid, it generates a username, hashes the password via BCrypt, and attempts to create a user in the database. Conflicts (duplicate email/username) trigger 400 Conflict errors. On success, the backend removes sensitive data (password) and returns a 201 Created response, prompting the frontend to redirect the user to login.
 
 ---
