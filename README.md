@@ -174,6 +174,8 @@ Describes profile updates (users/agents). Users edit details (e.g., avatar via C
 
 Shows saving/unsaving properties. Authenticated users click a save icon; the backend checks ownership (users can’t save their own properties). Existing saves are deleted; new ones are added to savedPosts. The frontend toggles the isSaved UI state.
 
+## Database Schema
+![Database_Schema](./Diagram/Database_Schema/diagram-export-7-4-2025-11_20_28-PM.png)
 ---
 
 
